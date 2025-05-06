@@ -11,13 +11,13 @@ export const Mictotasks02 = () => {
     ])
 
     const addMessage = (title: string) => {
-        let newMessage = { message: title }
-        setMessage([newMessage, ...message,])
+        let newMessage = {message: title}
+        setMessage([newMessage, ...message])
     }
 
     return (
         <>
-            <FullInput name={'+'} addMessage={addMessage} />
+            <FullInput addMessage={addMessage}/>
             {message.map((el, index) => {
                 return (
                     <div key={index} >{el.message}</div>
